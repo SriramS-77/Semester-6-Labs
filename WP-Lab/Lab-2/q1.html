@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="display: flex; flex-direction: column; align-items: center; height: 100vh; justify-content: center;">
+        <form action="./test.html">
+            <fieldset>
+                <legend>Student Form</legend>
+
+                <label>Name:</label> <br>
+                <input type="text" placeholder="Enter your name"> <br><br>
+                <label>Gender:</label> <br>
+                <input type="radio" name="gender_btn" value="Male">Male</input> <br>
+                <input type="radio" name="gender_btn" value="Female">Female</input> <br><br>
+                <label>Facilities required:</label> <br>
+                <input type="checkbox" style="margin: 0px 5px;">Transportation</input> <br>
+                <input type="checkbox" style="margin: 0px 5px;">Mess</input> <br><br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Semester</td>
+                            <td>GPA</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>8.2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>8.5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>9.3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>8.8</td>
+                        </tr>
+                    </tbody>
+                </table> <br>
+                <input type="checkbox" required style="margin: 0px 5px;">I have seen and verified that the above grades are correct.</input> <br><br>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
