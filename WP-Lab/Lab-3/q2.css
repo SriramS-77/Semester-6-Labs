@@ -1,0 +1,45 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Container for the greeting and clock */
+.container {
+    text-align: center;
+}
+
+/* Greeting message style */
+#greeting {
+    font-size: 2rem;
+    margin: 20px;
+    color: #333;
+}
+
+/* Clock style */
+.clock {
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Styling for the message box */
+.dialog-box {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #2900bd;
+    background-color: #72e782;
+}
+
+button {
+    padding: 15px 15px;
+    background-color: darkcyan;
+    color: chartreuse;
+}

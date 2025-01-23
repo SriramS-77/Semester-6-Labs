@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q-3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="q3.css">
+    </head>
+    <body class="container align-items-center">
+        <form class="form">
+            <fieldset>
+                <legend>Enter your marks!</legend>
+                <div class="input">
+                    <label>English</label>
+                    <input type="number" min="0" max="100" required>
+                </div>
+                <div class="input">
+                    <label>Mathematics</label>
+                    <input type="number" min="0" max="100" required>
+                </div>
+                <div class="input">
+                    <label>Computer Science</label>
+                    <input type="number" min="0" max="100" required>
+                </div>
+                <div class="input">
+                    <label>Science</label>
+                    <input type="number" min="0" max="100" required>
+                </div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <button type="button" onclick="submit_form();">Submit!</button>
+                    <div id="result" style="display: none; padding: 2px 5px; border-radius: 5px;"></div>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+    <script src="q3.js"></script>
+</html>

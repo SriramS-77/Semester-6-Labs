@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q-1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                text-align: center;
+            }
+            input {
+                padding: 5 5;
+            }
+            div.v-container {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                margin: 0px 50px;
+                margin-bottom: 30px;
+            }
+            div.h-container {
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body class="d-flex align-items-center">
+        <div style="padding: 5px 0px; margin-bottom: 20px; background-color: aquamarine;">
+            <h2>Online Quiz</h2>
+        </div>
+
+        <div class="v-container">
+            <b>Q1) Which is the fourth planet from the Sun?</b> 
+            <div class="h-container">
+                <input type="radio" name="q1" value="Saturn">
+                <p>Saturn</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q1" value="Mars">
+                <p>Mars</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q1"  value="Earth">
+                <p>Earth</p>
+            </div>
+            <div class="h-container">    
+                <input type="radio" name="q1" value="Venus">
+                <p>Venus</p>
+            </div>
+        </div>
+        
+        <div class="v-container">
+            <b>Q2) Who is the first Prime Minister of India?</b> 
+            <div class="h-container">
+                <input type="radio" name="q2" value="Jawaharlal Nehru">
+                <p>Jawaharlal Nehru</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q2" value="Gandhi">
+                <p>Gandhi</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q2" value="Ambedkar">
+                <p>Ambedkar</p>
+            </div>
+            <div class="h-container">    
+                <input type="radio" name="q2" value="Nahrandra Modi">
+                <p>Nahrendra Modi</p>
+            </div>
+        </div>  
+
+        <div class="v-container">
+            <b>Q3) Who is famous for playing a pirate?</b> 
+            <div class="h-container">
+                <input type="radio" name="q3" value="Keira Knightley">
+                <p>Keira Knightley</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q3" value="Johnny Depp">
+                <p>Johnny Depp</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q3" value="Orlando Bloom">
+                <p>Orlando Bloom</p>
+            </div>
+            <div class="h-container">    
+                <input type="radio" name="q3" value="All of the above">
+                <p>All of the above</p>
+            </div>
+        </div>  
+
+        <div class="v-container">
+            <b>Q4) What is the chemical formula of baking soda?</b> 
+            <div class="h-container">
+                <input type="radio" name="q4" value="Na2C">
+                <p>Na2C</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q4" value="Na2CO3">
+                <p>Na2CO3</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q4" value="NaHCO3">
+                <p>NaHCO3</p>
+            </div>
+            <div class="h-container">    
+                <input type="radio" name="q4" value="NaHCO2">
+                <p>NaHCO2</p>
+            </div>
+        </div>  
+
+        <div class="v-container">
+            <b>Q5) Which of the following would you not expect to see in a circus??</b> 
+            <div class="h-container">
+                <input type="radio" name="q5" value="Lion">
+                <p>Lion</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q5" value="Clown">
+                <p>Clown</p>
+            </div>
+            <div class="h-container">
+                <input type="radio" name="q5" value="Monkey">
+                <p>Monkey</p>
+            </div>
+            <div class="h-container">    
+                <input type="radio" name="q5" value="Pirhana">
+                <p>Pirhana</p>
+            </div>
+        </div>  
+
+        <div style="margin: 20px 0px 0px 0px; padding: 10px 0px; background-color: bisque; display: flex; flex-direction: row; gap: 30px; justify-content: center;">
+            <button class="button" onclick="submit();">Submit</button>
+            <div id="result" style="display: none; padding: 2px 5px; border-radius: 5px;"></div>
+        </div>
+    </body>
+    <script src="q1.js"></script>
+</html>

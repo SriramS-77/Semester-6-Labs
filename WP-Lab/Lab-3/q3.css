@@ -1,0 +1,13 @@
+div.input {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0px 30px 30px 20px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: darkcyan;
+    color: rgb(255, 255, 255);
+    margin: 0px 30px 30px 20px;
+}
