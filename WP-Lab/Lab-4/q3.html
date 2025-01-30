@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card-Maker</title>
+        <link rel="stylesheet" href="q3.css">
+    </head>
+
+    <body>
+        <div class="maker">
+            <h3 style="font-family: 'Courier New', Courier, monospace;">
+                Card-Maker
+            </h3>
+            <div class="container" style="border: das;">
+                <label>Choose background color:</label>
+                <select class="color">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="#3e9df0">Blue</option>
+                    <option value="pink">Pink</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <label>Choose text font:</label>
+                <select class="font">
+                    <option value="Verdana">Verdana</option>
+                    <option value="Arial Narrow">Arial Narrow</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="cursive">Cursive</option>
+                    <option value="Brush Script">Brush Script</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <label>Choose font size:</label>
+                <input class="size" type="number" min="10" max="30" value="15">
+            </div>
+
+            <div class="container">
+                <label>Choose border style:</label>
+                <select class="border">
+                    <option value="none">None</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="dotted">Dotted</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <label>Enter the text:</label>
+                <textarea class="text" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="container">
+                <label>Enter the image url:</label>
+                <input class="url" type="text"></textarea>
+            </div>
+
+            <button onclick="makeCard();">Make the card!</button>
+        </div>
+
+        <div class="card" id="card">
+            <h3 style="font-family: 'Courier New', Courier, monospace;">
+                Display
+            </h3>
+            <div class="text">
+                Text goes here...
+            </div>
+            <div class="image">
+                <img width="300" src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2021/10/30/85f2cb5f-44f8-4f2f-a813-63e657e11acc_5065cac7.jpg?itok=dugQzfiu&v=1635566576">
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="q3.js"></script>
+</html>

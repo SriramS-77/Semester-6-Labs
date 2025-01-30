@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: beige;
+}
+
+div.maker {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;   
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;    
+}
+
+div.card {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;  
+    padding: 20px 20px; 
+}

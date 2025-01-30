@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produce Bill</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Billing</h1>
+
+        <div class="form-group">
+            <label for="brandDropdown">Select Brand:</label>
+            <select id="brandDropdown">
+                <option value="hp">HP</option>
+                <option value="nokia">Nokia</option>
+                <option value="samsung">Samsung</option>
+                <option value="motorola">Motorola</option>
+                <option value="apple">Apple</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Product Type:</label>
+            <input type="checkbox" id="mobile" value="mobile"> Mobile
+            <input type="checkbox" id="laptop" value="laptop"> Laptop
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Enter Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+        </div>
+
+        <button id="produceBillButton">Produce Bill</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="q4.js"></script>
+</body>
+</html>
