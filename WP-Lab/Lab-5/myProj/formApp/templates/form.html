@@ -62,16 +62,15 @@
             text += "   Email: " + $('#email_input').val();
             let arr = $('input.subject_input');
             let avg = 0.0;
+            let size = 0;
 
-            for (var key in arr) {
-                if (arr.hasOwnProperty(key)) {
-                    console.log(key + " -> " + parseFloat(arr[key]['value']));
-                    avg += parseFloat(arr[key]['value']);
-                }
-            }
+            $.each(arr, function(key,valueObj){
+                avg += parseFloat(valueObj['value']);
+                size++;
+            });
 
-            console.log(typeof(avg))
-            text += "   Average marks across subjects: " + 4;
+            avg /= size;
+            text += "   Average marks across subjects: " + avg;
             console.log(text);
             let disp = $('textarea');
             disp.html(text);
