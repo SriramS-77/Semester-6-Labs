@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+
+<style>body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#calc_div {
+    margin-top: 10px;
+    background-color: aquamarine;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 3%;;
+}
+
+#disp {
+    border-radius: 3%;
+    background-color: white;
+    color: black;
+}
+
+button {
+    width: 40px;
+    font-family:'Courier New', Courier, monospace;
+}</style>
+
+    <body>
+        <h3>
+            Simple Calculator
+        </h3>
+        <div id="calc_div">
+            <input id="disp" type="text">
+
+            <table>
+                <tr>
+                    <td>
+                        <button>1</button>
+                    </td>
+                    <td>
+                        <button>2</button>
+                    </td>
+                    <td>
+                        <button>3</button>
+                    </td>
+                    <td>
+                        <button>+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>4</button>
+                    </td>
+                    <td>
+                        <button>5</button>
+                    </td>
+                    <td>
+                        <button>6</button>
+                    </td>
+                    <td>
+                        <button>-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>7</button>
+                    </td>
+                    <td>
+                        <button>8</button>
+                    </td>
+                    <td>
+                        <button>9</button>
+                    </td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>0</button>
+                    </td>
+                    <td>
+                        <button>CLR</button>
+                    </td>
+                    <td>
+                        <button>=</button>
+                    </td>
+                    <td>
+                        <button>/</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <script>
+const display_bar = $('#disp');
+
+function calc(expression) {
+    try {
+        var result = eval(expression); // Calculate the result using eval
+        return result;
+    } catch (error) {
+        return "ERROR";
+    }
+}
+
+$(document).ready(function() {
+    // This will add an onclick function to all buttons on the page
+    $('button').click(function() {
+        var buttonText = $(this).text();  // Get the text of the clicked button
+        console.log(buttonText + " button clicked!");
+        if (buttonText === "CLR") {
+            display_bar.val("");    
+        }
+        else if (buttonText === "=") {
+            let result = calc(display_bar.val());
+            display_bar.val(result); 
+        }
+        else if (buttonText === "x") {
+            display_bar.val(display_bar.val() + "*");
+        }
+        else {
+            display_bar.val(display_bar.val() + buttonText);
+        }
+        display_bar.focus()
+    });
+});
+
+    </script>
+</html>
+

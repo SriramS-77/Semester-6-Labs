@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link rel="stylesheet" href="{% static 'bookInfo/q3.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="homePage" class="page">
+            <h1>Book Information</h1>
+            <div class="book-cover">
+                <img src="{% static 'bookInfo/book-cover.jpg' %}" alt="Book Cover" id="bookCover">
+            </div>
+            <p>Click below to explore:</p>
+            <ul>
+                <li><a href="#" onclick="showPage('metadata')">Metadata</a></li>
+                <li><a href="#" onclick="showPage('reviews')">Reviews</a></li>
+                <li><a href="#" onclick="showPage('publisher')">Publisher Info</a></li>
+            </ul>
+        </div>
+
+        <!-- Metadata Page -->
+        <div id="metadataPage" class="page">
+            <h2>Metadata</h2>
+            <p><strong>Title:</strong> The Great Book</p>
+            <p><strong>Author:</strong> John Doe</p>
+            <p><strong>ISBN:</strong> 123-456-789</p>
+            <p><strong>Genre:</strong> Fiction</p>
+            <p><strong>Year:</strong> 2023</p>
+            <button onclick="goBackToHome()">Go to Home</button>
+        </div>
+
+        <!-- Reviews Page -->
+        <div id="reviewsPage" class="page">
+            <h2>Reviews</h2>
+            <p><strong>Reviewer 1:</strong> "An amazing book! A must-read for anyone who loves fiction."</p>
+            <p><strong>Reviewer 2:</strong> "Gripping plot with well-developed characters."</p>
+            <p><strong>Reviewer 3:</strong> "A thrilling journey from start to finish!"</p>
+            <button onclick="goBackToHome()">Go to Home</button>
+        </div>
+
+        <!-- Publisher Info Page -->
+        <div id="publisherPage" class="page">
+            <h2>Publisher Info</h2>
+            <p><strong>Publisher Name:</strong> XYZ Publishing</p>
+            <p><strong>Address:</strong> 123 Publishing St., City, Country</p>
+            <p><strong>Contact:</strong> +123-456-7890</p>
+            <button onclick="goBackToHome()">Go to Home</button>
+        </div>
+
+    </div>
+
+    <script src="% static 'bookInfo/q3.js' %"></script>
+    <script>
+// Function to switch pages based on the page name
+function showPage(page) {
+    console.log("Change Page!!!");
+    // Hide all pages
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+
+    // Show the selected page
+    if (page === 'metadata') {
+        document.getElementById('metadataPage').style.display = 'block';
+    } else if (page === 'reviews') {
+        document.getElementById('reviewsPage').style.display = 'block';
+    } else if (page === 'publisher') {
+        document.getElementById('publisherPage').style.display = 'block';
+    }
+}
+
+// Function to go back to the home page
+function goBackToHome() {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+    document.getElementById('homePage').style.display = 'block';
+}
+
+    </script>
+</body>
+</html>
