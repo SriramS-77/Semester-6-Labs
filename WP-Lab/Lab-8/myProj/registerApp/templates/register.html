@@ -1,0 +1,9 @@
+<html>
+    <body style="height: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <form action="" method="POST" style="background-color: bisque; padding: 30px 30px; border-radius: 5%;">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
