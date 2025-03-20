@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Page</title>
+</head>
+<body>
+    <h1>Add Page</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Page</button>
+    </form>
+    <a href="{% url 'webdirApp' %}">Back to Directory</a>
+</body>
+</html>

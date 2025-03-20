@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve People Working for a Company</title>
+</head>
+<body>
+    <h1>Retrieve People Working for a Specific Company</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if people_in_company %}
+        <h2>People working for the company:</h2>
+        <ul>
+        {% for person, city in people_in_company %}
+            <li>{{ person }} - City: {{ city }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="{% url 'insert_works' %}">Go to Insert Works</a>
+</body>
+</html>

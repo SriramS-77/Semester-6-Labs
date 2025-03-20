@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Directory</title>
+</head>
+<body>
+    <h1>Website Directory</h1>
+    <a href="{% url 'add_category' %}">Add Category</a><br>
+    <a href="{% url 'add_page' %}">Add Page</a><br><br>
+    
+    {% for category in categories %}
+        <h2>{{ category.name }}</h2>
+        <p>Visits: {{ category.number_of_visits }}</p>
+        <p>Likes: {{ category.number_of_likes }}</p>
+        <ul>
+            {% for page in category.pages.all %}
+                <li><a href="{{ page.url }}" target="_blank">{{ page.title }}</a> - Views: {{ page.views }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Data into WORKS</title>
+</head>
+<body>
+    <h1>Insert Data into WORKS Table</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Insert</button>
+    </form>
+    <a href="{% url 'retrieve_people' %}">Go to Retrieve People</a>
+</body>
+</html>
