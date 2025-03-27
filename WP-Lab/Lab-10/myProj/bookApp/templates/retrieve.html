@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve</title>
+</head>
+<body>
+    <h1>Retrieve Data</h1>
+    <form method="POST" action="./">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    <a href="{% url 'index' %}">Go to Populate</a>
+
+    <ul>{{ bookName }}</ul>
+    <ul>{{ bookDate }}</ul>
+    <ul>{{ authorName }}</ul>
+    <ul>{{ authorEmail }}</ul>
+    <ul>{{ publisherName }}</ul>
+    <ul>{{ publisherWebsite }}</ul>
+</body>
+</html>

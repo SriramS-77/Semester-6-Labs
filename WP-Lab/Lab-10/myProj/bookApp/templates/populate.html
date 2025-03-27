@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Data into Tables</title>
+</head>
+<body>
+    <h1>Insert Data</h1>
+    <form method="POST" action="./addAuthor/">
+        {% csrf_token %}
+        {{ authorForm.as_p }}
+        <button type="submit">Insert</button>
+    </form>
+
+    <form method="POST" action="./addPublisher/">
+        {% csrf_token %}
+        {{ publisherForm.as_p }}
+        <button type="submit">Insert</button>
+    </form>
+
+    <form method="POST" action="./addBook/">
+        {% csrf_token %}
+        {{ bookForm.as_p }}
+        <button type="submit">Insert</button>
+    </form>
+
+    <a href="{% url 'RetrieveRecords' %}">Go to Search</a>
+</body>
+</html>
